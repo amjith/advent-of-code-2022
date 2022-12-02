@@ -1,10 +1,15 @@
 # Day 1
 
-Use `nim -c -r hello.nim` to compile and run at the same time.
+Use `nim c -r hello.nim` to compile and run at the same time.
+
+Use `inim` (installed by `nimble install inim`) for a repl.
 
 `sort()` is part of the `std/algorithm` module. 
 `parseInt()` is part of `strutils` module.
-`
+
 `seq` is the equivalent of a list in python. An unbounded array.
 
+`let` is like `final` in some languages. You can assign to it once but can't change it. This is different from `const` because const requires things to be a value at compile time but `let` can assign dynamic things at runtime once but never change again.
+
 # Day 2
+

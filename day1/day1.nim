@@ -1,12 +1,11 @@
 import strutils
 import std/algorithm
-import std/sugar
 import std/sequtils
 
-proc countCalories(filename: File): int =
+proc countCalories(file: File): int =
   var calories = 0
   var totalCalories: seq[int]
-  for line in filename.lines:
+  for line in file.lines:
     if line == "":
       totalCalories.add(calories)
       calories = 0
