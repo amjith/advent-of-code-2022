@@ -13,3 +13,12 @@ Use `inim` (installed by `nimble install inim`) for a repl.
 
 # Day 2
 
+`import tables` to use hash tables.
+
+Hash table example:
+
+```
+import tables
+moveScore = {"A": 1, "B": 2, "C": 3}.toTable
+moveScore["C"]  # 3
+```
