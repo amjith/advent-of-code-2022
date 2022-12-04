@@ -22,3 +22,14 @@ import tables
 moveScore = {"A": 1, "B": 2, "C": 3}.toTable
 moveScore["C"]  # 3
 ```
+
+# Day 3
+
+
+# Day 4
+
+```
+import sequtils
+echo toSeq(0 .. 5)   # Create a sequence @[0, 1, 2, 3, 4, 5]
+echo toHashSet(toSeq(2 .. 4))  # Create a set {2, 3, 4}
+```
