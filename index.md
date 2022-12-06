@@ -28,8 +28,15 @@ moveScore["C"]  # 3
 
 # Day 4
 
+
+Generate a range of numbers
 ```
 import sequtils
 echo toSeq(0 .. 5)   # Create a sequence @[0, 1, 2, 3, 4, 5]
 echo toHashSet(toSeq(2 .. 4))  # Create a set {2, 3, 4}
 ```
+
+Also: 
+
+{0 .. 5} creates a set {0, 1, 2, 3, 4, 5}
+{2 .. 4} creates a set {2, 3, 4}
