@@ -40,3 +40,37 @@ Also:
 
 {0 .. 5} creates a set {0, 1, 2, 3, 4, 5}
 {2 .. 4} creates a set {2, 3, 4}
+
+# Day 5
+
+Classes are methods are a little weird. I'm still not sure what's the difference between a `proc` and a `method`.
+
+```
+type
+  Stack = object
+    boxes: seq[char]
+
+proc add(self: var Stack, box: char, append: bool) = 
+  if box.isAlphaAscii:
+    if append:
+      self.boxes.add(box)
+    else:
+      self.boxes.insert(box, 0)
+
+proc remove(self: var Stack): char = return pop(self.boxes)
+```
+
+The `self` arg needs to be a `var` so we can modify it. 
+
+# Day 7
+
+```
+type
+  ElfDir = ref object
+    parent: ElfDir
+    name: string
+    files: Table[string, ElfFile]
+    dirs: Table[string, ElfDir]
+```
+
+The object is of type `ref`. This makes it a reference. The `proc` that accesses it doesn't have to declare the self as a `var` because we're manipulating the reference directly (?). Also this has to be a ref so we can build a tree where one of the params in the class is self-referential.
