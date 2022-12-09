@@ -74,3 +74,13 @@ type
 ```
 
 The object is of type `ref`. This makes it a reference. The `proc` that accesses it doesn't have to declare the self as a `var` because we're manipulating the reference directly (?). Also this has to be a ref so we can build a tree where one of the params in the class is self-referential.
+
+# Day 8
+
+Used `foldl` with proper understanding. 
+
+```
+    self.data[row][col] > foldl(leftRow, max(a, b), -1) or
+```
+
+This will compute the max of a seq. But if the sequence is empty it will return a -1. -1 is the starting value. 
